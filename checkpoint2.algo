@@ -1,0 +1,19 @@
+ALGORITHM algorithm_sort
+VAR
+    n:INTEGER=T.length;
+    T: ARRAY_OF INTEGER[n];
+    p:INTEGER=0;
+    j:INTEGER=1;
+    i:INTEGER;
+BEGIN
+    i:=j-1;
+    FOR j FROM 1 TO n-1 STEP step 1 DO
+    WHILE (T[i]>T[j]) DO
+        p:=T[i];
+        T[i]:=T[j];
+        T[j]:=p;
+    END_WHILE
+    j++;
+    END_FOR
+    
+END
